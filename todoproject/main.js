@@ -38,13 +38,13 @@ function showtask(){
         }else{
             taskCompleteValue = `<td>${item.task_name}</td>`;
         }
-        html += `<tr draggable="true" ondragstart="start()" ondragover="dragover()" class="table-warning" >
+        html += `<tr draggable="true" ondragstart="start()" ondragover="dragover()"  >
                    
                  
                     ${taskCompleteValue}
                     
                     <td><button type="button" class="f1 text-success" onclick="completetask(${index})" id=${index}>Finish</button></td>
-                    <td><button type="button" class="text-secondary d-none" id="p1" onclick="pauseitem(${index})">Pause</button></td>
+                    <td id="p1" class="d-none"><button type="button" class="text-secondary "  onclick="pauseitem(${index})">Pause</button></td>
                     <td><button type="button" onclick="deleteitem(${index})" class="text-danger">Delete</button></td>
                     <td><button type="button" onclick="startitem(${index})" id="s1" class="text-primary" >start</button></td>
                      <td><button type="button" class="text-secondary d-none" id="p2" ></button></td>
@@ -57,7 +57,12 @@ function showtask(){
 function startitem(index){
 document.getElementById("newList").rows[index].cells[5].innerText="started"
 document.getElementById("newList").rows[index].cells[5].style.color="blue"
-document.querySelector("#p1").classList.remove("d-none")
+let abc= document.querySelectorAll("#p1")
+abc[index].classList.remove("d-none");
+console.log(abc);
+console.log(document.querySelector("#p1"));
+console.log(index);
+
 
 
 // console.log();
@@ -70,7 +75,7 @@ function pauseitem(index){
     document.getElementById("newList").rows[index].cells[5].innerHTML="paused"
     document.getElementById("newList").rows[index].cells[5].style.color="red"
     console.log(document.getElementById("newList").rows[index ].cells[5].innerHTML.value);
-    
+    console.log(index);
 }
 
 // deleteitem   
