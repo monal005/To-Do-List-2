@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="">
+    <div class="top">
+       <h1>TO - DO LIST</h1>
+    </div>
+</div>
+    <section class="outer-div ">
+     
+
+      <div class="row justify-content-md-center">
+        <div class=" col-md-7">
+
+          <div class="todo-inner">
+            <div class="form-row d-flex ">
+              <div class="col-8 mr-sm-2">
+                <input type="text" class="form-control" placeholder="Enter your task" id="input" />
+                <input type="hidden" id="saveindex">
+              </div>
+                <button type="button" class="btn btn-warning mr-sm-2" id="btn">
+                Add Task
+              </button>
+              <button type="button" class="btn btn-success mr-sm-2" id="savetaskbtn" style="display: none;">
+                Save Task
+              </button>
+              <button type="button" id="deleteallbtn" class="btn btn-danger">
+                Delete All
+              </button>
+            </div>
+            <div class="to-do-output">
+              
+            </div>
+          </div>
+    </div>
+      </div>
+    
+  </section>
+  <table class="table table-striped mt-3 mb-0 " id="newList">
+                
+    </table>
+
+      
+  <script src="main.js"></script>
+</body>
+
+</html>
