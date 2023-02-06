@@ -1,0 +1,41 @@
+This JavaScript code implements a simple task management system. The code can be broken down into the following sections:
+
+Variables:
+
+showtask() is called right away to display any tasks that are already stored in local storage.
+addtaskinput and addtaskbtn are variables that store references to the HTML elements with the ids "addtaskinput" and "addtaskbtn" respectively.
+
+
+Event Listeners:
+
+addtaskbtn has an event listener attached to it that listens for the "click" event. When the button is clicked, the function inside the event listener is executed.
+ 
+Inside the function:
+
+The value of the addtaskinput element is stored in addtaskinputval.
+If the value is not an empty string, a new task is added to the existing task list stored in local storage.
+
+The new task is added to the list as an object with two properties, 'task_name' and 'completeStatus'.
+
+The list of tasks is then updated in local storage.
+
+The value of the addtaskinput element is reset to an empty string.
+
+The function showtask() is called to update the display of tasks.
+
+
+Functions:
+
+showtask() retrieves the list of tasks from local storage and creates an HTML string that displays each task.
+
+startitem(index) updates the status of a task to "started" and shows the pause button.
+
+pauseitem(index) updates the status of a task to "paused".
+
+deleteitem(index) removes a task from the list of tasks and updates the display of tasks.
+
+completetask(index) updates the status of a task to "completed" and hides the complete and pause buttons.
+
+An event listener is added to the addedtasklist element that listens for click events.
+
+The code uses local storage to persist the list of tasks, so that the tasks are still available after the page is reloaded.
